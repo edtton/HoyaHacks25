@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 3f81f0a79dec9404b89628792c02a22b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _renderer: {instanceID: 0}
+  - _highlight: {instanceID: 0}
+  - _soilSprite: {instanceID: 0}
+  - _asphaltSprite: {fileID: -4226728495964450170, guid: 6bbea230dcd5341879ac43296facc381, type: 3}
+  - _waterSprite: {instanceID: 0}
+  - _woodStructSprite: {instanceID: 0}
+  - _stoneStructSprite: {instanceID: 0}
+  - _grassSprite: {instanceID: 0}
+  - _shrubSprite: {instanceID: 0}
+  - _treeSprite: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
