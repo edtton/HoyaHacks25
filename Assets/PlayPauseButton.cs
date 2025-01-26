@@ -43,18 +43,42 @@ public class PlayPauseButton : MonoBehaviour
         }
     }
 
+    // private void StartSimulation()
+    // {
+    //     Debug.Log("Simulation started!");
+    //     _renderer.sprite = _pauseSprite; // Switch to pause button
+    //     // Add logic to trigger fire propagation here
+    // }
+
     private void StartSimulation()
     {
         Debug.Log("Simulation started!");
         _renderer.sprite = _pauseSprite; // Switch to pause button
-        // Add logic to trigger fire propagation here
+
+        var gridManager = FindObjectOfType<GridManager>();
+        if (gridManager != null)
+        {
+            gridManager.StartFireSimulation();
+        }
     }
+
+    // private void PauseSimulation()
+    // {
+    //     Debug.Log("Simulation paused!");
+    //     _renderer.sprite = _playSprite; // Switch back to play button
+    //     // Add logic to pause fire propagation here
+    // }
 
     private void PauseSimulation()
     {
         Debug.Log("Simulation paused!");
         _renderer.sprite = _playSprite; // Switch back to play button
-        // Add logic to pause fire propagation here
+
+        var gridManager = FindObjectOfType<GridManager>();
+        if (gridManager != null)
+        {
+            gridManager.StopFireSimulation();
+        }
     }
 
     private void OnMouseEnter()
