@@ -4,16 +4,67 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>Unity Web Player | Wildfire Sim</title>
+  <title>Wildfire Sim</title>
   <style>
+
     body { 
       background-color:rgb(35 31 32);
+      text-align: center;
+      padding: 0;
+      border: 0;
+      margin: 0;
+      height: 95vh;
+      /* overflow: hidden; */
     }
-    #credits>p {
+
+    #credits > p {
       font-size: 14px;
       font-family: "Gabarito", serif;
       color: #f5dd7b;
+      margin: 10px 0; 
     }
+
+    #unity-canvas {
+      width: 90%;
+      max-width: 960px;
+      aspect-ratio: 16 / 9;
+      margin: 5px auto;
+      display: block;
+    }
+
+    #title-header {
+      font-size: 40px; 
+      font-family: "Gabarito", serif;
+      color: #f5dd7b;
+    }
+
+    #title-header > p {
+      margin: 20px;
+    }
+
+    @media (max-width: 768px) {
+      #unity-canvas {
+        width: 95%;
+        aspect-ratio: 16 / 9;
+      }
+
+      #credits > p {
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #unity-canvas {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+      }
+
+      #credits > p {
+        font-size: 10px;
+        padding: 10px;
+      }
+    }
+
   </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +73,11 @@
     rel="stylesheet">
 </head>
 
-<body style="text-align: center; padding: 0; border: 0; margin: 0;">
+<body>
+  <header id="title-header">
+    <p>Wildfire Sim</p>
+  </header>
+
   <canvas id="unity-canvas" width=960 height=600 tabindex="-1"
     style="width: 960px; height: 600px; background: #231F20"></canvas>
   <script src="Build/Webbuild.loader.js"></script>
